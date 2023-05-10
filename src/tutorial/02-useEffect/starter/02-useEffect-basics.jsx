@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const UseEffectBasics = () => {
   const [value, setValue] = useState(0);
@@ -7,6 +7,15 @@ const UseEffectBasics = () => {
   };
 
   sayHello();
+
+  useEffect(() => {
+    // const someFunc = async () => {
+    //   await fetch 
+    // }
+    // someFunc()
+    // can run
+    console.log("hello from useEffect"); //callback function
+  }, []) //dependancy array
 
   return (
     <div>
